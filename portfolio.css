@@ -6,6 +6,28 @@
     box-sizing: border-box;
 }
 
+span{
+    color: #e61f93;
+    font-family: 'IMB Plex Mono', monospace;
+    font-weight: bold;
+    text-decoration: none;
+}
+span:hover{
+    text-decoration: underline #e61f93;
+}
+
+
+
+span a{
+    color: #e61f93;
+    font-family: 'IMB Plex Mono', monospace;
+    font-weight: bold;
+    text-decoration: none;
+}
+span a:hover{
+    text-decoration: underline #e61f93;
+}
+
 .container{
     padding: 10px 10%;
 }
@@ -95,4 +117,8 @@ p{
     font-size: larger;
     cursor: pointer;
     border: none;
+}
+
+#btn-link:hover{
+    text-decoration: underline #1893F8;
 }
