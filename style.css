@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+/* ---------- NAV ----------*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 4px #e7e7e7;
+    z-index: 1000;
+}
+.container nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #e61f93;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+}
+nav ul li a:hover{
+    background-color: #e61f93;
+    color: white;
+    padding: 5px;
+}
+
+/* ---------- HEADER ---------- */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
+h1{
+    font-family: 'IMB Plex Mono', monospace;
+}
+.header-intro h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-intro{
+    margin-top: 15%;
+    font-size: 30px;
+}
+
+span{
+    color: #e61f93;
+    font-family: 'IMB Plex Mono', monospace;
+    font-weight: bold;
+}
+
+.header-intro p{
+    margin-top: 5px;
+}
+
+/* ---------- SECTIONS ---------- */
+h2{
+    font-family: 'IMB Plex Mono', monospace;
+    color: white;
+    background-color: #e61f93;
+    padding: 5px;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 10px 5px 5px #e7e7e7;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* ---------- ABOUT ---------- */
+#about{
+    padding: 80px 0;
+}
+
+#about p{
+    font-size: large;
+}
+
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 {
+    flex: 2; /* Ajustez la largeur de la colonne de texte en fonction de vos besoins */
+}
+
+.about-col-2 {
+    flex: 1; /* Ajustez la largeur de la colonne d'image en fonction de vos besoins */
+}
+
+
+#about ul{
+    padding-top: 10px;
+}
+#about ul li::before{
+    content: "★";
+    color: #e61f93;
+}
+#about ul li{
+    margin : 2px;
+    list-style: none;
+}
+#about ul li a{
+    text-decoration: none;
+}
+
+
+/* ---------- COMPETENCES ---------- */
+.competences-liste{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.competences-liste ul li{
+    display: inline-block;
+    list-style: none;
+    font-size: large;
+    margin: 10px 20px;
+    color: #e61f93;
+    border: solid #e61f93;
+    padding: 5px;
+    border-radius: 10px;
+}
+.competences-liste ul li a{
+    text-decoration: none;
+    color: #e61f93;
+    font-weight: bold;
+}
+
+#competences h3{
+    margin-top: 30px;
+}
+
+#competences a{
+    text-decoration: none;
+    position: relative;
+    color: black;
+    font-size: larger;
+}
+#competences a::before{
+    content: '';
+    background-color: #1893F8;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+#competences a:hover::before{
+    bottom: 0;
+    height: 100%;
+}
+
+
+/* ---------- PORTFOLIO ---------- */
+#portfolio{
+    padding: 80px 0;
+}
+
+.projet-liste{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.projet{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.projet img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), #de51a3);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.layer h3{
+    margin-bottom: 20px;
+    font-family: 'IMB Plex Mono', monospace;
+}
+
+.projet:hover img{
+    transform: scale(1.1);
+}
+
+.projet:hover .layer{
+    height: 100%;
+}
+
+
+/* ---------- CONTACT ---------- */
+#contact{
+    padding: 20px 0;
+    background-color: #e7e7e7;
+}
+
+#contact h3{
+    color: #e61f93;
+    text-align: center;
+}
+#contact p{
+    text-align: center;
+    font-size: smaller;
+}
+#contact h4{
+    font-family: 'IMB Plex Mono', monospace;
+}
+
+.reseau-liste{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.reseau{
+    padding: 30px;
+}
+.reseau a{
+    color: #e7e7e7;
+    text-decoration: none;
+    font-size: larger;
+    background-color: #e61f93;
+    border-radius: 50%;
+}
+.reseau a:hover{
+    background-color: #1893F8;
+}
+
+
+/* ---------- ABOUT ---------- */
+#scroll{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1893F8;
+    box-shadow: #e7e7e7;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+#scroll span{
+    color: white;
+}
+
+#scroll:active{
+    background: #0d5997;
+}
